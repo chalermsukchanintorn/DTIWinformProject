@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainMenu));
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btExitToLogin = new System.Windows.Forms.Button();
+            this.btRegister = new System.Windows.Forms.Button();
+            this.btShapeArea = new System.Windows.Forms.Button();
+            this.btDooDung = new System.Windows.Forms.Button();
+            this.btLotto = new System.Windows.Forms.Button();
+            this.btSAUShop = new System.Windows.Forms.Button();
+            this.btCalculator = new System.Windows.Forms.Button();
+            this.btWelcome = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.tslbUsername = new System.Windows.Forms.ToolStripLabel();
+            this.tslbDateTime = new System.Windows.Forms.ToolStripLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,120 +58,132 @@
             this.label1.Text = "DTI Soft V.1.0";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button5
+            // btExitToLogin
             // 
-            this.button5.Image = global::DTIWinformProject.Properties.Resources.exitapp;
-            this.button5.Location = new System.Drawing.Point(678, 335);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(151, 184);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "ออกจากระบบ";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btExitToLogin.Image = global::DTIWinformProject.Properties.Resources.exitapp;
+            this.btExitToLogin.Location = new System.Drawing.Point(678, 335);
+            this.btExitToLogin.Name = "btExitToLogin";
+            this.btExitToLogin.Size = new System.Drawing.Size(151, 184);
+            this.btExitToLogin.TabIndex = 9;
+            this.btExitToLogin.Text = "ออกจากระบบ";
+            this.btExitToLogin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btExitToLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btExitToLogin.UseVisualStyleBackColor = true;
+            this.btExitToLogin.Click += new System.EventHandler(this.btExitToLogin_Click);
             // 
-            // button6
+            // btRegister
             // 
-            this.button6.Image = global::DTIWinformProject.Properties.Resources.menu7;
-            this.button6.Location = new System.Drawing.Point(474, 335);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(151, 184);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Go to Register";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btRegister.Image = global::DTIWinformProject.Properties.Resources.menu7;
+            this.btRegister.Location = new System.Drawing.Point(474, 335);
+            this.btRegister.Name = "btRegister";
+            this.btRegister.Size = new System.Drawing.Size(151, 184);
+            this.btRegister.TabIndex = 8;
+            this.btRegister.Text = "Go to Register";
+            this.btRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btRegister.UseVisualStyleBackColor = true;
+            this.btRegister.Click += new System.EventHandler(this.btRegister_Click);
             // 
-            // button7
+            // btShapeArea
             // 
-            this.button7.Image = global::DTIWinformProject.Properties.Resources.menu6;
-            this.button7.Location = new System.Drawing.Point(270, 335);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(151, 184);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Go to Shape Area";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btShapeArea.Image = global::DTIWinformProject.Properties.Resources.menu6;
+            this.btShapeArea.Location = new System.Drawing.Point(270, 335);
+            this.btShapeArea.Name = "btShapeArea";
+            this.btShapeArea.Size = new System.Drawing.Size(151, 184);
+            this.btShapeArea.TabIndex = 7;
+            this.btShapeArea.Text = "Go to Shape Area";
+            this.btShapeArea.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btShapeArea.UseVisualStyleBackColor = true;
+            this.btShapeArea.Click += new System.EventHandler(this.btShapeArea_Click);
             // 
-            // button8
+            // btDooDung
             // 
-            this.button8.Image = global::DTIWinformProject.Properties.Resources.menu5;
-            this.button8.Location = new System.Drawing.Point(66, 335);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(151, 184);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Go to DooDung";
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btDooDung.Image = global::DTIWinformProject.Properties.Resources.menu5;
+            this.btDooDung.Location = new System.Drawing.Point(66, 335);
+            this.btDooDung.Name = "btDooDung";
+            this.btDooDung.Size = new System.Drawing.Size(151, 184);
+            this.btDooDung.TabIndex = 6;
+            this.btDooDung.Text = "Go to DooDung";
+            this.btDooDung.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btDooDung.UseVisualStyleBackColor = true;
+            this.btDooDung.Click += new System.EventHandler(this.btDooDung_Click);
             // 
-            // button4
+            // btLotto
             // 
-            this.button4.Image = global::DTIWinformProject.Properties.Resources.menu4;
-            this.button4.Location = new System.Drawing.Point(678, 125);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(151, 184);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Go to Lotto";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btLotto.Image = global::DTIWinformProject.Properties.Resources.menu4;
+            this.btLotto.Location = new System.Drawing.Point(678, 125);
+            this.btLotto.Name = "btLotto";
+            this.btLotto.Size = new System.Drawing.Size(151, 184);
+            this.btLotto.TabIndex = 5;
+            this.btLotto.Text = "Go to Lotto";
+            this.btLotto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btLotto.UseVisualStyleBackColor = true;
+            this.btLotto.Click += new System.EventHandler(this.btLotto_Click);
             // 
-            // button3
+            // btSAUShop
             // 
-            this.button3.Image = global::DTIWinformProject.Properties.Resources.menu3;
-            this.button3.Location = new System.Drawing.Point(474, 125);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 184);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Go to SAU Shop";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btSAUShop.Image = global::DTIWinformProject.Properties.Resources.menu3;
+            this.btSAUShop.Location = new System.Drawing.Point(474, 125);
+            this.btSAUShop.Name = "btSAUShop";
+            this.btSAUShop.Size = new System.Drawing.Size(151, 184);
+            this.btSAUShop.TabIndex = 4;
+            this.btSAUShop.Text = "Go to SAU Shop";
+            this.btSAUShop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btSAUShop.UseVisualStyleBackColor = true;
+            this.btSAUShop.Click += new System.EventHandler(this.btSAUShop_Click);
             // 
-            // button2
+            // btCalculator
             // 
-            this.button2.Image = global::DTIWinformProject.Properties.Resources.menu2;
-            this.button2.Location = new System.Drawing.Point(270, 125);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 184);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Go to Calculator";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btCalculator.Image = global::DTIWinformProject.Properties.Resources.menu2;
+            this.btCalculator.Location = new System.Drawing.Point(270, 125);
+            this.btCalculator.Name = "btCalculator";
+            this.btCalculator.Size = new System.Drawing.Size(151, 184);
+            this.btCalculator.TabIndex = 3;
+            this.btCalculator.Text = "Go to Calculator";
+            this.btCalculator.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btCalculator.UseVisualStyleBackColor = true;
+            this.btCalculator.Click += new System.EventHandler(this.btCalculator_Click);
             // 
-            // button1
+            // btWelcome
             // 
-            this.button1.Image = global::DTIWinformProject.Properties.Resources.menu1;
-            this.button1.Location = new System.Drawing.Point(66, 125);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 184);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Go to Welcome";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btWelcome.Image = global::DTIWinformProject.Properties.Resources.menu1;
+            this.btWelcome.Location = new System.Drawing.Point(66, 125);
+            this.btWelcome.Name = "btWelcome";
+            this.btWelcome.Size = new System.Drawing.Size(151, 184);
+            this.btWelcome.TabIndex = 2;
+            this.btWelcome.Text = "Go to Welcome";
+            this.btWelcome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btWelcome.UseVisualStyleBackColor = true;
+            this.btWelcome.Click += new System.EventHandler(this.btWelcome_Click);
             // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripLabel2});
+            this.tslbUsername,
+            this.tslbDateTime});
             this.toolStrip1.Location = new System.Drawing.Point(0, 580);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(912, 25);
             this.toolStrip1.TabIndex = 10;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
+            // tslbUsername
             // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel1.ForeColor = System.Drawing.Color.Blue;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(43, 22);
-            this.toolStripLabel1.Text = "name?";
+            this.tslbUsername.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tslbUsername.ForeColor = System.Drawing.Color.Blue;
+            this.tslbUsername.Name = "tslbUsername";
+            this.tslbUsername.Size = new System.Drawing.Size(43, 22);
+            this.tslbUsername.Text = "name?";
             // 
-            // toolStripLabel2
+            // tslbDateTime
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(59, 22);
-            this.toolStripLabel2.Text = "datetime?";
+            this.tslbDateTime.Name = "tslbDateTime";
+            this.tslbDateTime.Size = new System.Drawing.Size(59, 22);
+            this.tslbDateTime.Text = "datetime?";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmMainMenu
             // 
@@ -177,14 +191,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 605);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btExitToLogin);
+            this.Controls.Add(this.btRegister);
+            this.Controls.Add(this.btShapeArea);
+            this.Controls.Add(this.btDooDung);
+            this.Controls.Add(this.btLotto);
+            this.Controls.Add(this.btSAUShop);
+            this.Controls.Add(this.btCalculator);
+            this.Controls.Add(this.btWelcome);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -192,6 +206,7 @@
             this.Name = "FrmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "หน้าจอหลัก - DTI Soft V.1.0";
+            this.Load += new System.EventHandler(this.FrmMainMenu_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -202,16 +217,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btWelcome;
+        private System.Windows.Forms.Button btCalculator;
+        private System.Windows.Forms.Button btSAUShop;
+        private System.Windows.Forms.Button btLotto;
+        private System.Windows.Forms.Button btExitToLogin;
+        private System.Windows.Forms.Button btRegister;
+        private System.Windows.Forms.Button btShapeArea;
+        private System.Windows.Forms.Button btDooDung;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripLabel tslbUsername;
+        private System.Windows.Forms.ToolStripLabel tslbDateTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

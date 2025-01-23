@@ -108,6 +108,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShareData.cs" />
     <EmbeddedResource Include="FrmCalculator.resx">
       <DependentUpon>FrmCalculator.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSAURegister.resx">
       <DependentUpon>FrmSAURegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSAURegisterResult.resx">
+      <DependentUpon>FrmSAURegisterResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSAUShop.resx">
       <DependentUpon>FrmSAUShop.cs</DependentUpon>
@@ -208,6 +212,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\start2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marvel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
