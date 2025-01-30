@@ -28,45 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmShapeArea));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tslbUsername = new System.Windows.Forms.ToolStripLabel();
             this.tslbDateTime = new System.Windows.Forms.ToolStripLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lbCircleShow = new System.Windows.Forms.Label();
+            this.btCircleCancel = new System.Windows.Forms.Button();
+            this.btCircleCal = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtRadius = new System.Windows.Forms.TextBox();
+            this.tbRadius = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.rdoLineCircle = new System.Windows.Forms.RadioButton();
-            this.rdoAreaCircle = new System.Windows.Forms.RadioButton();
+            this.rdCircleRound = new System.Windows.Forms.RadioButton();
+            this.rdCircleArea = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtLong = new System.Windows.Forms.TextBox();
+            this.lbRectShow = new System.Windows.Forms.Label();
+            this.btRectCancel = new System.Windows.Forms.Button();
+            this.btRectCal = new System.Windows.Forms.Button();
+            this.tbHeight = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtWidth = new System.Windows.Forms.TextBox();
+            this.tbWidth = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rdoLineSquare = new System.Windows.Forms.RadioButton();
-            this.rdoAreaSquare = new System.Windows.Forms.RadioButton();
+            this.rdRectRound = new System.Windows.Forms.RadioButton();
+            this.rdRectArea = new System.Windows.Forms.RadioButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnCancel3 = new System.Windows.Forms.Button();
-            this.txtSide = new System.Windows.Forms.TextBox();
+            this.lbTriShow = new System.Windows.Forms.Label();
+            this.btTriCancel = new System.Windows.Forms.Button();
+            this.tbSideAngle = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtBase = new System.Windows.Forms.TextBox();
+            this.tbBase = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.rdoLineTriangle = new System.Windows.Forms.RadioButton();
-            this.rdoAreaTriangle = new System.Windows.Forms.RadioButton();
-            this.btnCalTriangle = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.rdTriRound = new System.Windows.Forms.RadioButton();
+            this.rdTriArea = new System.Windows.Forms.RadioButton();
+            this.btTriCal = new System.Windows.Forms.Button();
             this.btMainMenu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -113,14 +116,14 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.lbCircleShow);
+            this.tabPage1.Controls.Add(this.btCircleCancel);
+            this.tabPage1.Controls.Add(this.btCircleCal);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.txtRadius);
+            this.tabPage1.Controls.Add(this.tbRadius);
             this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.rdoLineCircle);
-            this.tabPage1.Controls.Add(this.rdoAreaCircle);
+            this.tabPage1.Controls.Add(this.rdCircleRound);
+            this.tabPage1.Controls.Add(this.rdCircleArea);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -129,6 +132,44 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "วงกลม";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lbCircleShow
+            // 
+            this.lbCircleShow.BackColor = System.Drawing.Color.Yellow;
+            this.lbCircleShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCircleShow.ForeColor = System.Drawing.Color.Red;
+            this.lbCircleShow.Location = new System.Drawing.Point(47, 189);
+            this.lbCircleShow.Name = "lbCircleShow";
+            this.lbCircleShow.Size = new System.Drawing.Size(228, 46);
+            this.lbCircleShow.TabIndex = 25;
+            this.lbCircleShow.Text = "0.00";
+            this.lbCircleShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btCircleCancel
+            // 
+            this.btCircleCancel.Image = global::DTIWinformProject.Properties.Resources.cancel;
+            this.btCircleCancel.Location = new System.Drawing.Point(310, 153);
+            this.btCircleCancel.Name = "btCircleCancel";
+            this.btCircleCancel.Size = new System.Drawing.Size(108, 33);
+            this.btCircleCancel.TabIndex = 35;
+            this.btCircleCancel.Text = "ยกเลิก";
+            this.btCircleCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btCircleCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btCircleCancel.UseVisualStyleBackColor = true;
+            this.btCircleCancel.Click += new System.EventHandler(this.btCircleCancel_Click);
+            // 
+            // btCircleCal
+            // 
+            this.btCircleCal.Image = global::DTIWinformProject.Properties.Resources.calculator2;
+            this.btCircleCal.Location = new System.Drawing.Point(310, 98);
+            this.btCircleCal.Name = "btCircleCal";
+            this.btCircleCal.Size = new System.Drawing.Size(108, 31);
+            this.btCircleCal.TabIndex = 34;
+            this.btCircleCal.Text = "คำนวณ";
+            this.btCircleCal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btCircleCal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btCircleCal.UseVisualStyleBackColor = true;
+            this.btCircleCal.Click += new System.EventHandler(this.btCircleCal_Click);
             // 
             // label6
             // 
@@ -139,12 +180,13 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "ผลลัพธ์";
             // 
-            // txtRadius
+            // tbRadius
             // 
-            this.txtRadius.Location = new System.Drawing.Point(50, 51);
-            this.txtRadius.Name = "txtRadius";
-            this.txtRadius.Size = new System.Drawing.Size(225, 20);
-            this.txtRadius.TabIndex = 26;
+            this.tbRadius.Location = new System.Drawing.Point(50, 51);
+            this.tbRadius.Name = "tbRadius";
+            this.tbRadius.Size = new System.Drawing.Size(225, 20);
+            this.tbRadius.TabIndex = 26;
+            this.tbRadius.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbRadius_KeyPress);
             // 
             // label11
             // 
@@ -155,40 +197,40 @@
             this.label11.TabIndex = 25;
             this.label11.Text = "รัศมี";
             // 
-            // rdoLineCircle
+            // rdCircleRound
             // 
-            this.rdoLineCircle.AutoSize = true;
-            this.rdoLineCircle.Location = new System.Drawing.Point(50, 122);
-            this.rdoLineCircle.Name = "rdoLineCircle";
-            this.rdoLineCircle.Size = new System.Drawing.Size(94, 17);
-            this.rdoLineCircle.TabIndex = 24;
-            this.rdoLineCircle.Text = "เส้นรอบวงกลม";
-            this.rdoLineCircle.UseVisualStyleBackColor = true;
+            this.rdCircleRound.AutoSize = true;
+            this.rdCircleRound.Location = new System.Drawing.Point(50, 122);
+            this.rdCircleRound.Name = "rdCircleRound";
+            this.rdCircleRound.Size = new System.Drawing.Size(94, 17);
+            this.rdCircleRound.TabIndex = 24;
+            this.rdCircleRound.Text = "เส้นรอบวงกลม";
+            this.rdCircleRound.UseVisualStyleBackColor = true;
             // 
-            // rdoAreaCircle
+            // rdCircleArea
             // 
-            this.rdoAreaCircle.AutoSize = true;
-            this.rdoAreaCircle.Checked = true;
-            this.rdoAreaCircle.Location = new System.Drawing.Point(50, 88);
-            this.rdoAreaCircle.Name = "rdoAreaCircle";
-            this.rdoAreaCircle.Size = new System.Drawing.Size(79, 17);
-            this.rdoAreaCircle.TabIndex = 23;
-            this.rdoAreaCircle.TabStop = true;
-            this.rdoAreaCircle.Text = "พื้นที่วงกลม";
-            this.rdoAreaCircle.UseVisualStyleBackColor = true;
+            this.rdCircleArea.AutoSize = true;
+            this.rdCircleArea.Checked = true;
+            this.rdCircleArea.Location = new System.Drawing.Point(50, 88);
+            this.rdCircleArea.Name = "rdCircleArea";
+            this.rdCircleArea.Size = new System.Drawing.Size(79, 17);
+            this.rdCircleArea.TabIndex = 23;
+            this.rdCircleArea.TabStop = true;
+            this.rdCircleArea.Text = "พื้นที่วงกลม";
+            this.rdCircleArea.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.txtLong);
+            this.tabPage2.Controls.Add(this.lbRectShow);
+            this.tabPage2.Controls.Add(this.btRectCancel);
+            this.tabPage2.Controls.Add(this.btRectCal);
+            this.tabPage2.Controls.Add(this.tbHeight);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.txtWidth);
+            this.tabPage2.Controls.Add(this.tbWidth);
             this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.rdoLineSquare);
-            this.tabPage2.Controls.Add(this.rdoAreaSquare);
+            this.tabPage2.Controls.Add(this.rdRectRound);
+            this.tabPage2.Controls.Add(this.rdRectArea);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -197,12 +239,49 @@
             this.tabPage2.Text = "สี่เหลี่ยม";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // txtLong
+            // lbRectShow
             // 
-            this.txtLong.Location = new System.Drawing.Point(177, 51);
-            this.txtLong.Name = "txtLong";
-            this.txtLong.Size = new System.Drawing.Size(98, 20);
-            this.txtLong.TabIndex = 15;
+            this.lbRectShow.BackColor = System.Drawing.Color.Yellow;
+            this.lbRectShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRectShow.ForeColor = System.Drawing.Color.Red;
+            this.lbRectShow.Location = new System.Drawing.Point(48, 189);
+            this.lbRectShow.Name = "lbRectShow";
+            this.lbRectShow.Size = new System.Drawing.Size(228, 46);
+            this.lbRectShow.TabIndex = 36;
+            this.lbRectShow.Text = "0.00";
+            this.lbRectShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btRectCancel
+            // 
+            this.btRectCancel.Image = global::DTIWinformProject.Properties.Resources.cancel;
+            this.btRectCancel.Location = new System.Drawing.Point(294, 143);
+            this.btRectCancel.Name = "btRectCancel";
+            this.btRectCancel.Size = new System.Drawing.Size(108, 33);
+            this.btRectCancel.TabIndex = 35;
+            this.btRectCancel.Text = "ยกเลิก";
+            this.btRectCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btRectCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btRectCancel.UseVisualStyleBackColor = true;
+            // 
+            // btRectCal
+            // 
+            this.btRectCal.Image = global::DTIWinformProject.Properties.Resources.calculator2;
+            this.btRectCal.Location = new System.Drawing.Point(294, 88);
+            this.btRectCal.Name = "btRectCal";
+            this.btRectCal.Size = new System.Drawing.Size(108, 31);
+            this.btRectCal.TabIndex = 34;
+            this.btRectCal.Text = "คำนวณ";
+            this.btRectCal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btRectCal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btRectCal.UseVisualStyleBackColor = true;
+            // 
+            // tbHeight
+            // 
+            this.tbHeight.Location = new System.Drawing.Point(177, 51);
+            this.tbHeight.Name = "tbHeight";
+            this.tbHeight.Size = new System.Drawing.Size(98, 20);
+            this.tbHeight.TabIndex = 15;
+            this.tbHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHeight_KeyPress);
             // 
             // label7
             // 
@@ -222,12 +301,13 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "ผลลัพธ์";
             // 
-            // txtWidth
+            // tbWidth
             // 
-            this.txtWidth.Location = new System.Drawing.Point(50, 51);
-            this.txtWidth.Name = "txtWidth";
-            this.txtWidth.Size = new System.Drawing.Size(98, 20);
-            this.txtWidth.TabIndex = 10;
+            this.tbWidth.Location = new System.Drawing.Point(50, 51);
+            this.tbWidth.Name = "tbWidth";
+            this.tbWidth.Size = new System.Drawing.Size(98, 20);
+            this.tbWidth.TabIndex = 10;
+            this.tbWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbWidth_KeyPress);
             // 
             // label4
             // 
@@ -238,42 +318,42 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "กว้าง";
             // 
-            // rdoLineSquare
+            // rdRectRound
             // 
-            this.rdoLineSquare.AutoSize = true;
-            this.rdoLineSquare.Location = new System.Drawing.Point(50, 122);
-            this.rdoLineSquare.Name = "rdoLineSquare";
-            this.rdoLineSquare.Size = new System.Drawing.Size(101, 17);
-            this.rdoLineSquare.TabIndex = 8;
-            this.rdoLineSquare.Text = "เส้นรอบสี่เหลี่ยม";
-            this.rdoLineSquare.UseVisualStyleBackColor = true;
+            this.rdRectRound.AutoSize = true;
+            this.rdRectRound.Location = new System.Drawing.Point(50, 122);
+            this.rdRectRound.Name = "rdRectRound";
+            this.rdRectRound.Size = new System.Drawing.Size(101, 17);
+            this.rdRectRound.TabIndex = 8;
+            this.rdRectRound.Text = "เส้นรอบสี่เหลี่ยม";
+            this.rdRectRound.UseVisualStyleBackColor = true;
             // 
-            // rdoAreaSquare
+            // rdRectArea
             // 
-            this.rdoAreaSquare.AutoSize = true;
-            this.rdoAreaSquare.Checked = true;
-            this.rdoAreaSquare.Location = new System.Drawing.Point(50, 88);
-            this.rdoAreaSquare.Name = "rdoAreaSquare";
-            this.rdoAreaSquare.Size = new System.Drawing.Size(86, 17);
-            this.rdoAreaSquare.TabIndex = 7;
-            this.rdoAreaSquare.TabStop = true;
-            this.rdoAreaSquare.Text = "พื้นที่สี่เหลี่ยม";
-            this.rdoAreaSquare.UseVisualStyleBackColor = true;
+            this.rdRectArea.AutoSize = true;
+            this.rdRectArea.Checked = true;
+            this.rdRectArea.Location = new System.Drawing.Point(50, 88);
+            this.rdRectArea.Name = "rdRectArea";
+            this.rdRectArea.Size = new System.Drawing.Size(86, 17);
+            this.rdRectArea.TabIndex = 7;
+            this.rdRectArea.TabStop = true;
+            this.rdRectArea.Text = "พื้นที่สี่เหลี่ยม";
+            this.rdRectArea.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.btnCancel3);
-            this.tabPage3.Controls.Add(this.txtSide);
+            this.tabPage3.Controls.Add(this.lbTriShow);
+            this.tabPage3.Controls.Add(this.btTriCancel);
+            this.tabPage3.Controls.Add(this.tbSideAngle);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Controls.Add(this.txtHeight);
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.txtBase);
+            this.tabPage3.Controls.Add(this.tbBase);
             this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.rdoLineTriangle);
-            this.tabPage3.Controls.Add(this.rdoAreaTriangle);
-            this.tabPage3.Controls.Add(this.btnCalTriangle);
+            this.tabPage3.Controls.Add(this.rdTriRound);
+            this.tabPage3.Controls.Add(this.rdTriArea);
+            this.tabPage3.Controls.Add(this.btTriCal);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(544, 269);
@@ -281,24 +361,37 @@
             this.tabPage3.Text = "สามเหลี่ยมมุมฉาก";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // btnCancel3
+            // lbTriShow
             // 
-            this.btnCancel3.Image = global::DTIWinformProject.Properties.Resources.cancel;
-            this.btnCancel3.Location = new System.Drawing.Point(305, 143);
-            this.btnCancel3.Name = "btnCancel3";
-            this.btnCancel3.Size = new System.Drawing.Size(108, 33);
-            this.btnCancel3.TabIndex = 33;
-            this.btnCancel3.Text = "ยกเลิก";
-            this.btnCancel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancel3.UseVisualStyleBackColor = true;
+            this.lbTriShow.BackColor = System.Drawing.Color.Yellow;
+            this.lbTriShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTriShow.ForeColor = System.Drawing.Color.Red;
+            this.lbTriShow.Location = new System.Drawing.Point(48, 189);
+            this.lbTriShow.Name = "lbTriShow";
+            this.lbTriShow.Size = new System.Drawing.Size(228, 46);
+            this.lbTriShow.TabIndex = 34;
+            this.lbTriShow.Text = "0.00";
+            this.lbTriShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtSide
+            // btTriCancel
             // 
-            this.txtSide.Location = new System.Drawing.Point(308, 51);
-            this.txtSide.Name = "txtSide";
-            this.txtSide.Size = new System.Drawing.Size(109, 20);
-            this.txtSide.TabIndex = 26;
+            this.btTriCancel.Image = global::DTIWinformProject.Properties.Resources.cancel;
+            this.btTriCancel.Location = new System.Drawing.Point(305, 143);
+            this.btTriCancel.Name = "btTriCancel";
+            this.btTriCancel.Size = new System.Drawing.Size(108, 33);
+            this.btTriCancel.TabIndex = 33;
+            this.btTriCancel.Text = "ยกเลิก";
+            this.btTriCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btTriCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btTriCancel.UseVisualStyleBackColor = true;
+            // 
+            // tbSideAngle
+            // 
+            this.tbSideAngle.Location = new System.Drawing.Point(308, 51);
+            this.tbSideAngle.Name = "tbSideAngle";
+            this.tbSideAngle.Size = new System.Drawing.Size(109, 20);
+            this.tbSideAngle.TabIndex = 26;
+            this.tbSideAngle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSideAngle_KeyPress);
             // 
             // label10
             // 
@@ -315,6 +408,7 @@
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(98, 20);
             this.txtHeight.TabIndex = 24;
+            this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHeight_KeyPress);
             // 
             // label5
             // 
@@ -334,12 +428,13 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "ผลลัพธ์";
             // 
-            // txtBase
+            // tbBase
             // 
-            this.txtBase.Location = new System.Drawing.Point(50, 51);
-            this.txtBase.Name = "txtBase";
-            this.txtBase.Size = new System.Drawing.Size(98, 20);
-            this.txtBase.TabIndex = 19;
+            this.tbBase.Location = new System.Drawing.Point(50, 51);
+            this.tbBase.Name = "tbBase";
+            this.tbBase.Size = new System.Drawing.Size(98, 20);
+            this.tbBase.TabIndex = 19;
+            this.tbBase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBase_KeyPress);
             // 
             // label9
             // 
@@ -350,87 +445,39 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "ฐาน";
             // 
-            // rdoLineTriangle
+            // rdTriRound
             // 
-            this.rdoLineTriangle.AutoSize = true;
-            this.rdoLineTriangle.Location = new System.Drawing.Point(50, 122);
-            this.rdoLineTriangle.Name = "rdoLineTriangle";
-            this.rdoLineTriangle.Size = new System.Drawing.Size(113, 17);
-            this.rdoLineTriangle.TabIndex = 17;
-            this.rdoLineTriangle.Text = "เส้นรอบสามเหลี่ยม";
-            this.rdoLineTriangle.UseVisualStyleBackColor = true;
+            this.rdTriRound.AutoSize = true;
+            this.rdTriRound.Location = new System.Drawing.Point(50, 122);
+            this.rdTriRound.Name = "rdTriRound";
+            this.rdTriRound.Size = new System.Drawing.Size(113, 17);
+            this.rdTriRound.TabIndex = 17;
+            this.rdTriRound.Text = "เส้นรอบสามเหลี่ยม";
+            this.rdTriRound.UseVisualStyleBackColor = true;
             // 
-            // rdoAreaTriangle
+            // rdTriArea
             // 
-            this.rdoAreaTriangle.AutoSize = true;
-            this.rdoAreaTriangle.Checked = true;
-            this.rdoAreaTriangle.Location = new System.Drawing.Point(50, 88);
-            this.rdoAreaTriangle.Name = "rdoAreaTriangle";
-            this.rdoAreaTriangle.Size = new System.Drawing.Size(98, 17);
-            this.rdoAreaTriangle.TabIndex = 16;
-            this.rdoAreaTriangle.TabStop = true;
-            this.rdoAreaTriangle.Text = "พื้นที่สามเหลี่ยม";
-            this.rdoAreaTriangle.UseVisualStyleBackColor = true;
+            this.rdTriArea.AutoSize = true;
+            this.rdTriArea.Checked = true;
+            this.rdTriArea.Location = new System.Drawing.Point(50, 88);
+            this.rdTriArea.Name = "rdTriArea";
+            this.rdTriArea.Size = new System.Drawing.Size(98, 17);
+            this.rdTriArea.TabIndex = 16;
+            this.rdTriArea.TabStop = true;
+            this.rdTriArea.Text = "พื้นที่สามเหลี่ยม";
+            this.rdTriArea.UseVisualStyleBackColor = true;
             // 
-            // btnCalTriangle
+            // btTriCal
             // 
-            this.btnCalTriangle.Image = global::DTIWinformProject.Properties.Resources.calculator2;
-            this.btnCalTriangle.Location = new System.Drawing.Point(305, 88);
-            this.btnCalTriangle.Name = "btnCalTriangle";
-            this.btnCalTriangle.Size = new System.Drawing.Size(108, 31);
-            this.btnCalTriangle.TabIndex = 21;
-            this.btnCalTriangle.Text = "คำนวณ";
-            this.btnCalTriangle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCalTriangle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCalTriangle.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::DTIWinformProject.Properties.Resources.cancel;
-            this.button1.Location = new System.Drawing.Point(294, 143);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 33);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "ยกเลิก";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::DTIWinformProject.Properties.Resources.calculator2;
-            this.button2.Location = new System.Drawing.Point(294, 88);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 31);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "คำนวณ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::DTIWinformProject.Properties.Resources.cancel;
-            this.button3.Location = new System.Drawing.Point(310, 153);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 33);
-            this.button3.TabIndex = 35;
-            this.button3.Text = "ยกเลิก";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::DTIWinformProject.Properties.Resources.calculator2;
-            this.button4.Location = new System.Drawing.Point(310, 98);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 31);
-            this.button4.TabIndex = 34;
-            this.button4.Text = "คำนวณ";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btTriCal.Image = global::DTIWinformProject.Properties.Resources.calculator2;
+            this.btTriCal.Location = new System.Drawing.Point(305, 88);
+            this.btTriCal.Name = "btTriCal";
+            this.btTriCal.Size = new System.Drawing.Size(108, 31);
+            this.btTriCal.TabIndex = 21;
+            this.btTriCal.Text = "คำนวณ";
+            this.btTriCal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btTriCal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btTriCal.UseVisualStyleBackColor = true;
             // 
             // btMainMenu
             // 
@@ -443,6 +490,7 @@
             this.btMainMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btMainMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btMainMenu.UseVisualStyleBackColor = true;
+            this.btMainMenu.Click += new System.EventHandler(this.btMainMenu_Click);
             // 
             // label1
             // 
@@ -456,41 +504,9 @@
             this.label1.Text = "คำนวณรูปทรง";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // timer1
             // 
-            this.label3.BackColor = System.Drawing.Color.Yellow;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(47, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(228, 46);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "0.00";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Yellow;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(48, 189);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(228, 46);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "0.00";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.Yellow;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(48, 189);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(228, 46);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "0.00";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmShapeArea
             // 
@@ -501,9 +517,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmShapeArea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "หน้าจอ คำนวณรูปทรง - DTI Soft V.1.0";
+            this.Load += new System.EventHandler(this.FrmShapeArea_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -524,39 +544,40 @@
         private System.Windows.Forms.ToolStripLabel tslbDateTime;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btCircleCancel;
+        private System.Windows.Forms.Button btCircleCal;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtRadius;
+        private System.Windows.Forms.TextBox tbRadius;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RadioButton rdoLineCircle;
-        private System.Windows.Forms.RadioButton rdoAreaCircle;
+        private System.Windows.Forms.RadioButton rdCircleRound;
+        private System.Windows.Forms.RadioButton rdCircleArea;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtLong;
+        private System.Windows.Forms.Button btRectCancel;
+        private System.Windows.Forms.Button btRectCal;
+        private System.Windows.Forms.TextBox tbHeight;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtWidth;
+        private System.Windows.Forms.TextBox tbWidth;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton rdoLineSquare;
-        private System.Windows.Forms.RadioButton rdoAreaSquare;
+        private System.Windows.Forms.RadioButton rdRectRound;
+        private System.Windows.Forms.RadioButton rdRectArea;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button btnCancel3;
-        private System.Windows.Forms.TextBox txtSide;
+        private System.Windows.Forms.Button btTriCancel;
+        private System.Windows.Forms.TextBox tbSideAngle;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtHeight;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtBase;
+        private System.Windows.Forms.TextBox tbBase;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton rdoLineTriangle;
-        private System.Windows.Forms.RadioButton rdoAreaTriangle;
-        private System.Windows.Forms.Button btnCalTriangle;
+        private System.Windows.Forms.RadioButton rdTriRound;
+        private System.Windows.Forms.RadioButton rdTriArea;
+        private System.Windows.Forms.Button btTriCal;
         private System.Windows.Forms.Button btMainMenu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbCircleShow;
+        private System.Windows.Forms.Label lbRectShow;
+        private System.Windows.Forms.Label lbTriShow;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -38,23 +38,23 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.nudWeight = new System.Windows.Forms.NumericUpDown();
-            this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbFullname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.mtbIdCard = new System.Windows.Forms.MaskedTextBox();
+            this.mtbIDcard = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblShowHoro = new System.Windows.Forms.Label();
+            this.lbShowResult = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.lblShowHeight = new System.Windows.Forms.Label();
-            this.lblShowWeight = new System.Windows.Forms.Label();
-            this.lblShowAge = new System.Windows.Forms.Label();
-            this.lblShowBirthDay = new System.Windows.Forms.Label();
-            this.lblShowName = new System.Windows.Forms.Label();
-            this.lblShowIdCard = new System.Windows.Forms.Label();
+            this.lbHeight = new System.Windows.Forms.Label();
+            this.lbWeight = new System.Windows.Forms.Label();
+            this.lbAge = new System.Windows.Forms.Label();
+            this.lbBirthDate = new System.Windows.Forms.Label();
+            this.lbFullname = new System.Windows.Forms.Label();
+            this.lbIDcard = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,14 +63,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.bthHoro = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
+            this.btExit = new System.Windows.Forms.Button();
+            this.btDooDung = new System.Windows.Forms.Button();
+            this.btNew = new System.Windows.Forms.Button();
             this.btMainMenu = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tslbUsername = new System.Windows.Forms.ToolStripLabel();
             this.tslbDateTime = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbBMI = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
@@ -102,11 +106,11 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.nudWeight);
-            this.groupBox1.Controls.Add(this.dtpBirthDay);
+            this.groupBox1.Controls.Add(this.dtpBirthDate);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.tbName);
+            this.groupBox1.Controls.Add(this.tbFullname);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.mtbIdCard);
+            this.groupBox1.Controls.Add(this.mtbIDcard);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.groupBox1.Location = new System.Drawing.Point(71, 134);
@@ -189,12 +193,12 @@
             this.nudWeight.Size = new System.Drawing.Size(85, 20);
             this.nudWeight.TabIndex = 11;
             // 
-            // dtpBirthDay
+            // dtpBirthDate
             // 
-            this.dtpBirthDay.Location = new System.Drawing.Point(86, 91);
-            this.dtpBirthDay.Name = "dtpBirthDay";
-            this.dtpBirthDay.Size = new System.Drawing.Size(260, 20);
-            this.dtpBirthDay.TabIndex = 10;
+            this.dtpBirthDate.Location = new System.Drawing.Point(86, 91);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(260, 20);
+            this.dtpBirthDate.TabIndex = 10;
             // 
             // label4
             // 
@@ -206,12 +210,13 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "ว/ด/ป เกิด";
             // 
-            // tbName
+            // tbFullname
             // 
-            this.tbName.Location = new System.Drawing.Point(86, 54);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(260, 20);
-            this.tbName.TabIndex = 8;
+            this.tbFullname.Location = new System.Drawing.Point(86, 54);
+            this.tbFullname.Name = "tbFullname";
+            this.tbFullname.Size = new System.Drawing.Size(260, 20);
+            this.tbFullname.TabIndex = 8;
+            this.tbFullname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFullname_KeyPress);
             // 
             // label3
             // 
@@ -223,13 +228,13 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "ชื่อ-สกุล";
             // 
-            // mtbIdCard
+            // mtbIDcard
             // 
-            this.mtbIdCard.Location = new System.Drawing.Point(86, 22);
-            this.mtbIdCard.Mask = "0-0000-00000-00-0";
-            this.mtbIdCard.Name = "mtbIdCard";
-            this.mtbIdCard.Size = new System.Drawing.Size(123, 20);
-            this.mtbIdCard.TabIndex = 6;
+            this.mtbIDcard.Location = new System.Drawing.Point(86, 22);
+            this.mtbIDcard.Mask = "0-0000-00000-00-0";
+            this.mtbIDcard.Name = "mtbIDcard";
+            this.mtbIDcard.Size = new System.Drawing.Size(123, 20);
+            this.mtbIDcard.TabIndex = 6;
             // 
             // label2
             // 
@@ -243,14 +248,17 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.lbBMI);
+            this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.panel2);
-            this.groupBox2.Controls.Add(this.panel1);
-            this.groupBox2.Controls.Add(this.lblShowHeight);
-            this.groupBox2.Controls.Add(this.lblShowWeight);
-            this.groupBox2.Controls.Add(this.lblShowAge);
-            this.groupBox2.Controls.Add(this.lblShowBirthDay);
-            this.groupBox2.Controls.Add(this.lblShowName);
-            this.groupBox2.Controls.Add(this.lblShowIdCard);
+            this.groupBox2.Controls.Add(this.lbHeight);
+            this.groupBox2.Controls.Add(this.lbWeight);
+            this.groupBox2.Controls.Add(this.lbAge);
+            this.groupBox2.Controls.Add(this.lbBirthDate);
+            this.groupBox2.Controls.Add(this.lbFullname);
+            this.groupBox2.Controls.Add(this.lbIDcard);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label8);
@@ -260,7 +268,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.groupBox2.Location = new System.Drawing.Point(505, 144);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(442, 366);
+            this.groupBox2.Size = new System.Drawing.Size(442, 409);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ผลดวงของคุณ";
@@ -268,31 +276,32 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblShowHoro);
-            this.panel2.Location = new System.Drawing.Point(22, 231);
+            this.panel2.Controls.Add(this.lbShowResult);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Location = new System.Drawing.Point(22, 265);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(356, 108);
             this.panel2.TabIndex = 29;
             // 
-            // lblShowHoro
+            // lbShowResult
             // 
-            this.lblShowHoro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblShowHoro.ForeColor = System.Drawing.Color.Fuchsia;
-            this.lblShowHoro.Location = new System.Drawing.Point(33, 11);
-            this.lblShowHoro.Name = "lblShowHoro";
-            this.lblShowHoro.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblShowHoro.Size = new System.Drawing.Size(284, 83);
-            this.lblShowHoro.TabIndex = 28;
-            this.lblShowHoro.Text = "ผลดวง";
-            this.lblShowHoro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbShowResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbShowResult.ForeColor = System.Drawing.Color.Fuchsia;
+            this.lbShowResult.Location = new System.Drawing.Point(33, 16);
+            this.lbShowResult.Name = "lbShowResult";
+            this.lbShowResult.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbShowResult.Size = new System.Drawing.Size(284, 75);
+            this.lbShowResult.TabIndex = 28;
+            this.lbShowResult.Text = "ผลดวง";
+            this.lbShowResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label19);
-            this.panel1.Location = new System.Drawing.Point(22, 230);
+            this.panel1.Location = new System.Drawing.Point(3, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(356, 81);
+            this.panel1.Size = new System.Drawing.Size(348, 81);
             this.panel1.TabIndex = 27;
             // 
             // label19
@@ -307,71 +316,71 @@
             this.label19.Text = "ผลดวง";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblShowHeight
+            // lbHeight
             // 
-            this.lblShowHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblShowHeight.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblShowHeight.Location = new System.Drawing.Point(99, 196);
-            this.lblShowHeight.Name = "lblShowHeight";
-            this.lblShowHeight.Size = new System.Drawing.Size(239, 10);
-            this.lblShowHeight.TabIndex = 26;
-            this.lblShowHeight.Text = "XXXXXXXXXX";
-            this.lblShowHeight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHeight.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lbHeight.Location = new System.Drawing.Point(99, 196);
+            this.lbHeight.Name = "lbHeight";
+            this.lbHeight.Size = new System.Drawing.Size(239, 20);
+            this.lbHeight.TabIndex = 26;
+            this.lbHeight.Text = "XXXXXXXXXX";
+            this.lbHeight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblShowWeight
+            // lbWeight
             // 
-            this.lblShowWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblShowWeight.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblShowWeight.Location = new System.Drawing.Point(99, 161);
-            this.lblShowWeight.Name = "lblShowWeight";
-            this.lblShowWeight.Size = new System.Drawing.Size(239, 10);
-            this.lblShowWeight.TabIndex = 25;
-            this.lblShowWeight.Text = "XXXXXXXXXX";
-            this.lblShowWeight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbWeight.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lbWeight.Location = new System.Drawing.Point(99, 161);
+            this.lbWeight.Name = "lbWeight";
+            this.lbWeight.Size = new System.Drawing.Size(239, 20);
+            this.lbWeight.TabIndex = 25;
+            this.lbWeight.Text = "XXXXXXXXXX";
+            this.lbWeight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblShowAge
+            // lbAge
             // 
-            this.lblShowAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblShowAge.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblShowAge.Location = new System.Drawing.Point(99, 129);
-            this.lblShowAge.Name = "lblShowAge";
-            this.lblShowAge.Size = new System.Drawing.Size(239, 10);
-            this.lblShowAge.TabIndex = 24;
-            this.lblShowAge.Text = "XXXXXXXXXX";
-            this.lblShowAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbAge.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lbAge.Location = new System.Drawing.Point(99, 129);
+            this.lbAge.Name = "lbAge";
+            this.lbAge.Size = new System.Drawing.Size(239, 20);
+            this.lbAge.TabIndex = 24;
+            this.lbAge.Text = "XXXXXXXXXX";
+            this.lbAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblShowBirthDay
+            // lbBirthDate
             // 
-            this.lblShowBirthDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblShowBirthDay.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblShowBirthDay.Location = new System.Drawing.Point(99, 97);
-            this.lblShowBirthDay.Name = "lblShowBirthDay";
-            this.lblShowBirthDay.Size = new System.Drawing.Size(239, 10);
-            this.lblShowBirthDay.TabIndex = 23;
-            this.lblShowBirthDay.Text = "XXXXXXXXXX";
-            this.lblShowBirthDay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbBirthDate.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lbBirthDate.Location = new System.Drawing.Point(99, 97);
+            this.lbBirthDate.Name = "lbBirthDate";
+            this.lbBirthDate.Size = new System.Drawing.Size(239, 20);
+            this.lbBirthDate.TabIndex = 23;
+            this.lbBirthDate.Text = "XXXXXXXXXX";
+            this.lbBirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblShowName
+            // lbFullname
             // 
-            this.lblShowName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblShowName.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblShowName.Location = new System.Drawing.Point(99, 61);
-            this.lblShowName.Name = "lblShowName";
-            this.lblShowName.Size = new System.Drawing.Size(239, 10);
-            this.lblShowName.TabIndex = 22;
-            this.lblShowName.Text = "XXXXXXXXXX";
-            this.lblShowName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbFullname.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lbFullname.Location = new System.Drawing.Point(99, 61);
+            this.lbFullname.Name = "lbFullname";
+            this.lbFullname.Size = new System.Drawing.Size(239, 20);
+            this.lbFullname.TabIndex = 22;
+            this.lbFullname.Text = "XXXXXXXXXX";
+            this.lbFullname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblShowIdCard
+            // lbIDcard
             // 
-            this.lblShowIdCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblShowIdCard.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblShowIdCard.Location = new System.Drawing.Point(99, 25);
-            this.lblShowIdCard.Name = "lblShowIdCard";
-            this.lblShowIdCard.Size = new System.Drawing.Size(239, 10);
-            this.lblShowIdCard.TabIndex = 21;
-            this.lblShowIdCard.Text = "XXXXXXXXXX";
-            this.lblShowIdCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbIDcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbIDcard.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lbIDcard.Location = new System.Drawing.Point(99, 25);
+            this.lbIDcard.Name = "lbIDcard";
+            this.lbIDcard.Size = new System.Drawing.Size(239, 20);
+            this.lbIDcard.TabIndex = 21;
+            this.lbIDcard.Text = "XXXXXXXXXX";
+            this.lbIDcard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
             // 
@@ -452,41 +461,44 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnExit
+            // btExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnExit.Image = global::DTIWinformProject.Properties.Resources.exit3;
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(71, 474);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(171, 43);
-            this.btnExit.TabIndex = 39;
-            this.btnExit.Text = "จบโปรแกรม";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btExit.Image = global::DTIWinformProject.Properties.Resources.exit3;
+            this.btExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btExit.Location = new System.Drawing.Point(71, 474);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(171, 43);
+            this.btExit.TabIndex = 39;
+            this.btExit.Text = "จบโปรแกรม";
+            this.btExit.UseVisualStyleBackColor = true;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
-            // bthHoro
+            // btDooDung
             // 
-            this.bthHoro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bthHoro.Image = global::DTIWinformProject.Properties.Resources.find1;
-            this.bthHoro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bthHoro.Location = new System.Drawing.Point(71, 420);
-            this.bthHoro.Name = "bthHoro";
-            this.bthHoro.Size = new System.Drawing.Size(171, 43);
-            this.bthHoro.TabIndex = 38;
-            this.bthHoro.Text = "ดูดวง";
-            this.bthHoro.UseVisualStyleBackColor = true;
+            this.btDooDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btDooDung.Image = global::DTIWinformProject.Properties.Resources.find1;
+            this.btDooDung.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDooDung.Location = new System.Drawing.Point(71, 420);
+            this.btDooDung.Name = "btDooDung";
+            this.btDooDung.Size = new System.Drawing.Size(171, 43);
+            this.btDooDung.TabIndex = 38;
+            this.btDooDung.Text = "ดูดวง";
+            this.btDooDung.UseVisualStyleBackColor = true;
+            this.btDooDung.Click += new System.EventHandler(this.btDooDung_Click);
             // 
-            // btnNew
+            // btNew
             // 
-            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnNew.Image = global::DTIWinformProject.Properties.Resources.new1;
-            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(71, 364);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(171, 43);
-            this.btnNew.TabIndex = 37;
-            this.btnNew.Text = "ใหม่";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.btNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btNew.Image = global::DTIWinformProject.Properties.Resources.new1;
+            this.btNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btNew.Location = new System.Drawing.Point(71, 364);
+            this.btNew.Name = "btNew";
+            this.btNew.Size = new System.Drawing.Size(171, 43);
+            this.btNew.TabIndex = 37;
+            this.btNew.Text = "ใหม่";
+            this.btNew.UseVisualStyleBackColor = true;
+            this.btNew.Click += new System.EventHandler(this.btNew_Click);
             // 
             // btMainMenu
             // 
@@ -499,6 +511,7 @@
             this.btMainMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btMainMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btMainMenu.UseVisualStyleBackColor = true;
+            this.btMainMenu.Click += new System.EventHandler(this.btMainMenu_Click);
             // 
             // toolStrip1
             // 
@@ -526,6 +539,51 @@
             this.tslbDateTime.Size = new System.Drawing.Size(59, 22);
             this.tslbDateTime.Text = "datetime?";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lbBMI
+            // 
+            this.lbBMI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbBMI.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lbBMI.Location = new System.Drawing.Point(99, 232);
+            this.lbBMI.Name = "lbBMI";
+            this.lbBMI.Size = new System.Drawing.Size(239, 20);
+            this.lbBMI.TabIndex = 31;
+            this.lbBMI.Text = "XXXXXXXXXX";
+            this.lbBMI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label16.Location = new System.Drawing.Point(40, 231);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(43, 13);
+            this.label16.TabIndex = 30;
+            this.label16.Text = "BMI";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label13.Location = new System.Drawing.Point(202, 161);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 13);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "กิโลกรัม";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label17.Location = new System.Drawing.Point(202, 196);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(74, 13);
+            this.label17.TabIndex = 33;
+            this.label17.Text = "เซ็นติเมตร";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FrmDooDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,9 +591,9 @@
             this.ClientSize = new System.Drawing.Size(1009, 595);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.bthHoro);
-            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.btExit);
+            this.Controls.Add(this.btDooDung);
+            this.Controls.Add(this.btNew);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btMainMenu);
@@ -544,6 +602,7 @@
             this.Name = "FrmDooDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "หน้าจอ ดูดวงแม่นๆ - DTI Soft V.1.0";
+            this.Load += new System.EventHandler(this.FrmDooDung_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
@@ -570,37 +629,41 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown nudWeight;
-        private System.Windows.Forms.DateTimePicker dtpBirthDay;
+        private System.Windows.Forms.DateTimePicker dtpBirthDate;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbFullname;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox mtbIdCard;
+        private System.Windows.Forms.MaskedTextBox mtbIDcard;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblShowHoro;
+        private System.Windows.Forms.Label lbShowResult;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lblShowHeight;
-        private System.Windows.Forms.Label lblShowWeight;
-        private System.Windows.Forms.Label lblShowAge;
-        private System.Windows.Forms.Label lblShowBirthDay;
-        private System.Windows.Forms.Label lblShowName;
-        private System.Windows.Forms.Label lblShowIdCard;
+        private System.Windows.Forms.Label lbHeight;
+        private System.Windows.Forms.Label lbWeight;
+        private System.Windows.Forms.Label lbAge;
+        private System.Windows.Forms.Label lbBirthDate;
+        private System.Windows.Forms.Label lbFullname;
+        private System.Windows.Forms.Label lbIDcard;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button bthHoro;
-        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btExit;
+        private System.Windows.Forms.Button btDooDung;
+        private System.Windows.Forms.Button btNew;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel tslbUsername;
         private System.Windows.Forms.ToolStripLabel tslbDateTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbBMI;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label13;
     }
 }
